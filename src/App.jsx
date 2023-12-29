@@ -1,21 +1,22 @@
 import React from "react";
 import useSettings from "./hooks/useSettings";
-import useResponsive from "./hooks/useResponsive";
 import ThemeProvider from "./theme";
+import { RouterProvider } from "react-router-dom";
+import routes from "./routes";
 
 const App = () => {
   const { themeMode, onToggleMode } = useSettings();
-  const a = useResponsive("down", "md");
 
   return (
     <ThemeProvider>
-      <button
+      {/* <button
         onClick={() => {
           onToggleMode();
         }}
       >
         {themeMode}
-      </button>
+      </button> */}
+      <RouterProvider router={routes} />
     </ThemeProvider>
   );
 };

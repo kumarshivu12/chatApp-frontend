@@ -27,6 +27,7 @@ const ThemeProvider = ({ children }) => {
   }));
 
   const theme = createTheme(themeOptions);
+  console.log(theme);
   return (
     <StyledEngineProvider injectFirst>
       <MUIThemeProvider theme={theme}>
